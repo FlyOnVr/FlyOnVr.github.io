@@ -6,19 +6,21 @@
     <meta name="description" content="Borealis: Conquer Gorilla Tag with the premier mod menu!">
     <meta name="keywords" content="Borealis, gorilla tag mods, gaming enhancements, FTSyxcal">
     <meta name="author" content="FTSyxcal">
-    <meta content="Borealis" property="og:title" />
-    <meta content="Revolutionize your Gorilla Tag experience with Borealis's elite features!" property="og:description" />
-    <meta content="https://borealis.menu/" property="og:url" />
-    <meta content="https://github.com/FlyOnVr/FlyOnVr.github.io/blob/main/_A_.png?raw=true" property="og:image" />
-    <meta content="#0004e5" data-react-helmet="true" name="theme-color" />
-    <meta content="website" property="og:type">
-    <link rel="icon" href="https://github.com/FlyOnVr/FlyOnVr.github.io/blob/main/_A_.png?raw=true" type="image/png">
+
+    <meta property="og:title" content="Borealis">
+    <meta property="og:description" content="Revolutionize your Gorilla Tag experience with Borealis's elite features!">
+    <meta property="og:url" content="https://borealis.menu/">
+    <meta property="og:image" content="https://github.com/FlyOnVr/FlyOnVr.github.io/blob/main/_A_.png?raw=true">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0004e5">
+
     <title>ASTRE | The Best Gtag Menu</title>
+
+    <link rel="icon" href="https://github.com/FlyOnVr/FlyOnVr.github.io/blob/main/_A_.png?raw=true" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* ================= ORIGINAL STYLES (UNCHANGED) ================= */
         * {
             margin: 0;
             padding: 0;
@@ -41,82 +43,19 @@
             color: var(--text-primary);
             background: linear-gradient(to bottom, var(--bg-dark), var(--bg-darker));
             overflow-x: hidden;
-            user-select: none;
-            line-height: 1.6;
         }
 
-        /* scrollbar */
-        body::-webkit-scrollbar { width: 8px; }
-        body::-webkit-scrollbar-track { background: var(--bg-darker); }
-        body::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
-
-        h1, h2, h3, p, a, strong, li, .price-amount {
-            text-shadow: 0 0 2px var(--primary), 0 0 5px var(--secondary);
-            transition: text-shadow 0.3s ease;
-        }
-
-        /* ================= PRICING CARD STYLES (UNCHANGED) ================= */
-        .pricing-section {
-            padding: 70px 20px;
-            background: var(--bg-dark);
+        h2 {
             text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
         }
 
-        .price-card {
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            margin: 0 auto;
-            position: relative;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        .pricing-section {
+            padding: 80px 20px;
+            background: var(--bg-dark);
         }
 
-        .price-card.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .price-amount {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .price-description {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-
-        .price-features {
-            list-style: none;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .price-features li {
-            font-size: 16px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .buy-button {
-            display: inline-block;
-            font-size: 18px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        /* ================= ADDITION (SAFE FIX) ================= */
         .pricing-container {
             display: flex;
             justify-content: center;
@@ -124,8 +63,58 @@
             flex-wrap: wrap;
         }
 
-        .pricing-container .price-card {
-            margin: 0;
+        .price-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .price-amount {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .price-description {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--text-secondary);
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .price-features li {
+            margin-bottom: 12px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .check-icon {
+            color: var(--primary);
+        }
+
+        .buy-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
@@ -139,8 +128,8 @@
 
 <body>
 
-<section id="pricing" class="pricing-section">
-    <h2>Our Services!</h2>
+<section class="pricing-section">
+    <h2>Our Services</h2>
 
     <div class="pricing-container">
 
@@ -148,25 +137,29 @@
             <div class="price-amount">ASTRE Menu</div>
             <p class="price-description">$5</p>
             <ul class="price-features">
-                <li><i class="fas fa-check"></i> Overpowered</li>
-                <li><i class="fas fa-check"></i> Undetected Everywhere</li>
-                <li><i class="fas fa-check"></i> Smooth Modding</li>
-                <li><i class="fas fa-check"></i> Cheapest</li>
-                <li><i class="fas fa-check"></i> Clean UIs</li>
+                <li><i class="fas fa-check check-icon"></i> Overpowered</li>
+                <li><i class="fas fa-check check-icon"></i> Undetected Everywhere</li>
+                <li><i class="fas fa-check check-icon"></i> Smooth Modding</li>
+                <li><i class="fas fa-check check-icon"></i> Cheapest</li>
+                <li><i class="fas fa-check check-icon"></i> Clean UIs</li>
             </ul>
-            <a href="https://buy.stripe.com/00wbIU63acir5Vn3fO43S03" class="buy-button">BUY</a>
+            <a href="https://buy.stripe.com/00wbIU63acir5Vn3fO43S03" target="_blank" rel="noopener noreferrer" class="buy-button">
+                <i class="fas fa-shopping-cart"></i> BUY
+            </a>
         </div>
 
         <div class="price-card reveal-element">
             <div class="price-amount">Unbanned Gorilla Tag Account</div>
             <p class="price-description">$8</p>
             <ul class="price-features">
-                <li><i class="fas fa-check"></i> Unbanned</li>
-                <li><i class="fas fa-check"></i> Warranty On All Accounts</li>
-                <li><i class="fas fa-check"></i> Full Access</li>
-                <li><i class="fas fa-check"></i> Cheapest</li>
+                <li><i class="fas fa-check check-icon"></i> Unbanned</li>
+                <li><i class="fas fa-check check-icon"></i> Warranty On All Accounts</li>
+                <li><i class="fas fa-check check-icon"></i> Full Access</li>
+                <li><i class="fas fa-check check-icon"></i> Cheapest</li>
             </ul>
-            <a href="https://buy.stripe.com/00w4gs3V2cir5Vn9Ec43S02" class="buy-button">BUY</a>
+            <a href="https://buy.stripe.com/00w4gs3V2cir5Vn9Ec43S02" target="_blank" rel="noopener noreferrer" class="buy-button">
+                <i class="fas fa-shopping-cart"></i> BUY
+            </a>
         </div>
 
     </div>
