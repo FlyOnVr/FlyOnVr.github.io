@@ -494,6 +494,64 @@ button:focus-visible{
   max-width:520px;
 }
 
+/* ---------- Legal / Privacy Policy ---------- */
+
+.legal-body{
+  max-width:720px;
+}
+
+.legal-body h4{
+  font-family:'Oswald', sans-serif;
+  font-weight:600;
+  font-size:1.05rem;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  margin-top:36px;
+  margin-bottom:10px;
+}
+
+.legal-body h4:first-child{
+  margin-top:0;
+}
+
+.legal-body p{
+  color:var(--ink-dim);
+  font-size:0.95rem;
+  margin-top:10px;
+}
+
+.legal-body p strong{
+  color:var(--ink);
+  font-weight:600;
+}
+
+.legal-body ul{
+  margin-top:8px;
+  padding-left:20px;
+  color:var(--ink-dim);
+  font-size:0.95rem;
+}
+
+.legal-body li{
+  margin-top:4px;
+}
+
+.legal-body a{
+  color:var(--steel);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+footer a{
+  color:var(--ink-dim);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+footer a:hover{
+  color:var(--ink);
+}
+
 /* ---------- Contact / footer ---------- */
 
 .contact{
