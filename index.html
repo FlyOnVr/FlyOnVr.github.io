@@ -14,19 +14,33 @@
 <body>
 
     <nav class="navbar">
-        <!-- Logo is now a link: clicking it jumps back to the top of the page -->
+        <!-- Logo is a link: clicking it jumps back to the top of the page -->
         <a href="#top" class="logo" aria-label="Fusion Studios — back to top">
             <img src="images/logo.png" alt="Fusion Studios logo" class="logo-mark">
             Fusion Studios
         </a>
 
-        <!-- Top-left tab: jumps to the second game section -->
-        <a href="#game-2" class="nav-tab">WARFARE - RELEASING SOON</a>
+        <!-- Top-left WARFARE dropdown. Add more <li> entries to grow the category. -->
+        <div class="nav-dropdown">
+            <button type="button"
+                    class="nav-tab"
+                    id="warfare-toggle"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="warfare-menu">
+                Warfare — releasing soon
+                <span class="nav-tab-caret" aria-hidden="true"></span>
+            </button>
+
+            <ul class="dropdown-menu" id="warfare-menu" aria-labelledby="warfare-toggle" hidden>
+                <li><a href="#game-2">Overview</a></li>
+                <li><a href="#roadmap">Game progress</a></li>
+            </ul>
+        </div>
 
         <ul class="nav-links">
             <li><a href="#about">Studio</a></li>
             <li><a href="#game">FRAGMENT</a></li>
-            <li><a href="#game-2">WARFARE</a></li>
             <li><a href="#screenshots">Media</a></li>
             <li><a href="#roadmap">Progress</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -115,8 +129,7 @@
 
     <hr class="divider">
 
-    <!-- ===== Second game section (copy of the FRAGMENT block) ===== -->
-    <!-- Rename PROJECT TWO in three places: the tab, the nav link, and the h2 below. -->
+    <!-- ===== WARFARE ===== -->
     <section class="section" id="game-2">
         <div class="game-panel">
             <div class="game-copy">
@@ -228,6 +241,46 @@
     <footer>
         © 2026 Fusion Studios. All rights reserved.
     </footer>
+
+    <script>
+        // WARFARE dropdown: click to open, click outside or Escape to close.
+        (function () {
+            var toggle = document.getElementById('warfare-toggle');
+            var menu = document.getElementById('warfare-menu');
+            if (!toggle || !menu) return;
+
+            function openMenu() {
+                menu.hidden = false;
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMenu() {
+                menu.hidden = true;
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (menu.hidden) { openMenu(); } else { closeMenu(); }
+            });
+
+            // Clicking an item navigates, then closes the menu.
+            menu.addEventListener('click', function (e) {
+                if (e.target.closest('a')) closeMenu();
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!menu.hidden && !e.target.closest('.nav-dropdown')) closeMenu();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !menu.hidden) {
+                    closeMenu();
+                    toggle.focus();
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
