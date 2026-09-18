@@ -14,21 +14,26 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">
+        <!-- Logo is now a link: clicking it jumps back to the top of the page -->
+        <a href="#top" class="logo" aria-label="Fusion Studios — back to top">
             <img src="images/logo.png" alt="Fusion Studios logo" class="logo-mark">
             Fusion Studios
-        </div>
+        </a>
+
+        <!-- Top-left tab: jumps to the second game section -->
+        <a href="#game-2" class="nav-tab">PROJECT TWO</a>
 
         <ul class="nav-links">
             <li><a href="#about">Studio</a></li>
             <li><a href="#game">FRAGMENT</a></li>
+            <li><a href="#game-2">PROJECT TWO</a></li>
             <li><a href="#screenshots">Media</a></li>
             <li><a href="#roadmap">Progress</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="top">
         <div class="hero-core" aria-hidden="true"></div>
 
         <div class="hero-content">
@@ -103,6 +108,34 @@
 
             <div class="game-visual">
                 <img src="images/screenshot-1.jpg" alt="Placeholder image — in-game screenshot coming soon">
+                <span class="tag">Placeholder — footage coming soon</span>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== Second game section (copy of the FRAGMENT block) ===== -->
+    <!-- Rename PROJECT TWO in three places: the tab, the nav link, and the h2 below. -->
+    <section class="section" id="game-2">
+        <div class="game-panel">
+            <div class="game-copy">
+                <span class="status-pill">In active development</span>
+                <h2>PROJECT TWO</h2>
+                <p>
+                    Placeholder copy — swap this for the second game's description. Same structure as the FRAGMENT block above, so anything you change here will match the styling already in styles.css.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Feature one</li>
+                    <li>Feature two</li>
+                    <li>Feature three</li>
+                    <li>Feature four</li>
+                </ul>
+            </div>
+
+            <div class="game-visual">
+                <img src="images/screenshot-2.jpg" alt="Placeholder image — in-game screenshot coming soon">
                 <span class="tag">Placeholder — footage coming soon</span>
             </div>
         </div>
